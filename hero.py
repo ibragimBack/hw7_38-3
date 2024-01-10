@@ -23,3 +23,54 @@ Hero.hi()
 
 
 
+class Superman(SuperHero):
+    hero = 'hero'
+    def __init__(self,name,nickname,superpower,health_points,catchphrase,damage,fly=False):
+        super(Superman, self).__init__(name,nickname,superpower,health_points,catchphrase)
+        self.damage = damage
+        self.fly = fly
+
+    def hi(self):
+        super().hi()
+        print(self.health_points ** 2)
+        self.fly = True
+    def get_info(self):
+        print('True in the True_phrase')
+
+hero2 = Superman('Кларк','Супермен','лазерный взгляд',1000,'я не знаю какая у него фраза',500,True,)
+# Superman.hi()
+# Superman.get_info()
+print(hero2)
+
+
+
+class Batman(SuperHero):
+    hero2 = 'hero'
+    def __init__(self,name,nickname,superpower,health_points,catchphrase,damage,fly=False):
+        super(Batman, self).__init__(name,nickname,superpower,health_points,catchphrase)
+        self.damage = damage
+        self.fly = fly
+    def hi(self):
+        super().hi()
+        print(self.health_points ** 2)
+        self.fly = True
+
+    def get_info(self):
+        print('True in the True_phrase')
+
+hero3 = Batman('Питер','Человек паук','Паутина',100,'Тётя Мей',15,False)
+# Batman.get_info()
+# Batman.hi()
+print(hero3)
+
+
+
+class Villain(Batman):
+    monster = 'monster'
+
+    def gen_x(self):...
+
+    def crit(self):
+        print(self.damage ** 2)
+
+
